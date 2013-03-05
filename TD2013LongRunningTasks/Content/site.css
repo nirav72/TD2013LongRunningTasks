@@ -1,0 +1,35 @@
+﻿body {
+    padding-top: 40px;
+}
+
+input.listselector {
+    margin-top: 10px;
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+}
+
+    input.listselector:hover {
+        -moz-opacity: 1;
+        opacity: 1;
+    }
+
+#mytasks-layout {
+    padding-top: 20px;
+}
+
+.preloaded {
+    display: none;
+}
+
+#list {
+    margin-top: 20px;
+}
+#listCommands {
+    padding-left: 20px;
+}
+.selected {
+    background-color: #f9f9f9;
+}
+.clickable {
+    cursor: pointer;
+}

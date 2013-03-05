@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/bootstrap")
+    
+    @*Allow remote mobile debugging*@
+    @if(this.Request.QueryString["debug"] != null)
+    {
+        <script src="http://jsconsole.com/remote.js?@this.Request.QueryString["debug"]"></script>
+    }
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav">
+                    <li class="active" id="navmytasks">
+                        <a href="@Url.Action("Index", "Home")">My Tasks</a>
+                    </li>
+                    <li id="navabout"><a href="@Url.Action("About", "Home")">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="maincontent"></div>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/JSBus")
+    <script src="~/signalr/hubs"></script>
+    @Scripts.Render("~/bundles/things")
+    @Scripts.Render("~/bundles/notifications")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

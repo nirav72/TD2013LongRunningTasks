@@ -1,0 +1,43 @@
+﻿@model dynamic
+
+@{
+    const string PageId = "about";
+    string hiddenClass = ViewBag.Page.Equals(PageId) ? string.Empty : "preloaded";
+}
+
+<div id="@PageId" class="spapage @hiddenClass" data-page-title="About this demo">
+<div class="hero-unit">
+  <h1>What, why?</h1>
+    <h4>
+        This demo was created as a proof of concept for
+    </h4>
+    <ul>
+        <li>Master-details adaptive layout</li>
+        <li>User interaction during long running list operations</li>
+    </ul>
+    <h4>
+        Products and technologies used
+    </h4>
+    <ul>
+        <li>HTML5 (naturally)</li>
+        <li><a href="http://www.asp.net/mvc">ASP.NET MVC</a> for routing and views</li>
+        <li><a href="http://www.asp.net/web-api">ASP.NET Web API</a> for REST services</li>
+        <li><a href="http://knockoutjs.com/">Knockout.js</a> for client side MVVM pattern</li>
+        <li><a href="http://sammyjs.org/">Sammy.js</a> for client side routing</li>
+        <li><a href="http://signalr.net/">SignalR</a> for server to browser communications</li>
+        <li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> for easy layout</li>
+        <li><a href="http://typescriptlang.org">TypeScript</a> to test its validity on client side MVVM scenario</li>
+    </ul>
+    @*    <p>
+        Use cases you should try
+    </p>
+    <ul>
+        <li>TODO: add some items here</li>
+    </ul>*@
+    <p>
+        <a href="@Url.Action("Index")" class="btn btn-primary btn-large">
+            Take me to the front page
+        </a>
+    </p>
+</div>
+</div>
