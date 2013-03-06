@@ -25,7 +25,8 @@ module Things {
         bus: any;
         hub: any = $.connection.tasks;
 
-        constructor () {
+        constructor() {
+
             // Initialize SignalR data transfer used in client/server operation
             var sendTransport = new JSBus.SignalRSendTransport(this.hub.server),
                 subscribeTransport = new JSBus.SignalRSubscribeTransport(this.hub.client);
