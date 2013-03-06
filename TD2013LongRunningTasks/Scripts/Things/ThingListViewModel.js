@@ -31,6 +31,7 @@ var Things;
                 m.OperationPending(true);
                 m.IsChecked(false);
                 _this.bus.send({
+                    name: "StartTask",
                     id: m.Id
                 });
             });

@@ -61,7 +61,7 @@ module Things {
                 m.IsChecked(false);
 
                 // Create StartTaskCommand and send it
-                this.bus.send({ id: m.Id });
+                this.bus.send({ name: "StartTask", id: m.Id });
             });
 
             this.info.publish("Processing " + checked.length + " items...");
